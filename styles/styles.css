@@ -1,0 +1,272 @@
+:root {
+    --primary: #000000;       /* deep navy-black — headers, hero */
+    --secondary: #000000;     /* slightly lighter navy — sections */
+    --accent: #000000;        /* cyan blue — matches 3D render glow */
+    --accent-2: #000000;   /* orange — CTAs and highlights */
+    --text-dark: #1A1A1A;     /* body text on light backgrounds */
+    --text-light: #E8E8E8;    /* body text on dark backgrounds */
+    --background: #F4F4F4;    /* light section background */
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 8%;
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--accent);
+}
+
+.logo h1 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 1.6rem;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+/* accent color on the "Flow" part visually — 
+   achieved via CSS on the whole h1 with a 
+   subtle glow to reinforce the tech feel */
+.logo h1 {
+    text-shadow: 0 0 18px rgba(0, 212, 255, 0.35);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: var(--text-light);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    letter-spacing: 0.03em;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ============================================
+   HEADINGS
+   ============================================ */
+
+h1, h2, h3 {
+    font-family: "Arial Black", Arial, sans-serif;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+/* ============================================
+   MAIN CONTENT WRAPPER
+   ============================================ */
+
+main {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* ============================================
+   HERO SECTION
+   No image provided by client — using a 
+   styled placeholder that communicates the 
+   brand feel. Swap background-image in when
+   client supplies the file.
+   ============================================ */
+
+.hero {
+    background-color: var(--primary);
+    background-image: 
+        linear-gradient(135deg, 
+            rgba(0, 212, 255, 0.08) 0%, 
+            rgba(26, 26, 46, 0.95) 60%);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 8%;
+    margin: 0 calc(-4%);
+    width: calc(100% + 8%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* decorative grid lines — gives a 3D blueprint feel 
+   without needing an image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.hero-image-placeholder {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+}
+
+.hero-text-box h2 {
+    color: var(--white);
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text-box p {
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   CONTENT SPLIT SECTION
+   ============================================ */
+
+.content-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 56px 0;
+    border-bottom: 2px solid rgba(26, 26, 46, 0.1);
+}
+
+.content-text h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+}
+
+.content-text p {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    margin-top: 56px;
+    padding: 24px 8%;
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--accent);
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+
+@media screen and (max-width: 760px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px 5%;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 40px 6%;
+    }
+
+    .hero-text-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .content-split {
+        padding: 36px 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   WHEN IMAGE FILES ARRIVE FROM CLIENT:
+   
+   Replace the .hero gradient background with:
+   
+   .hero {
+       background-image: url('images/hero-image.png');
+       background-size: cover;
+       background-position: center;
+   }
+   
+   And remove the .hero::before grid overlay
+   if the image itself provides enough visual
+   interest.
+   ============================================ */
