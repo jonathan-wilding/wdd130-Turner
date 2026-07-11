@@ -1,11 +1,11 @@
 :root {
-    --primary: #000000;       /* deep navy-black — headers, hero */
-    --secondary: #000000;     /* slightly lighter navy — sections */
-    --accent: #000000;        /* cyan blue — matches 3D render glow */
-    --accent-2: #000000;   /* orange — CTAs and highlights */
-    --text-dark: #1A1A1A;     /* body text on light backgrounds */
-    --text-light: #E8E8E8;    /* body text on dark backgrounds */
-    --background: #F4F4F4;    /* light section background */
+    --primary: #000000;
+    --secondary: #000000;
+    --accent: #e8e8e8;
+    --accent-2: #000000;
+    --text-dark: #1A1A1A;
+    --text-light: #E8E8E8;
+    --background: #F4F4F4;
     --white: #FFFFFF;
 }
 
@@ -27,10 +27,6 @@ img {
     max-width: 100%;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
-
 header {
     display: flex;
     align-items: center;
@@ -49,9 +45,6 @@ header {
     margin: 0;
 }
 
-/* accent color on the "Flow" part visually — 
-   achieved via CSS on the whole h1 with a 
-   subtle glow to reinforce the tech feel */
 .logo h1 {
     text-shadow: 0 0 18px rgba(0, 212, 255, 0.35);
 }
@@ -81,10 +74,6 @@ nav a.active {
     border-color: var(--accent);
 }
 
-/* ============================================
-   HEADINGS
-   ============================================ */
-
 h1, h2, h3 {
     font-family: "Arial Black", Arial, sans-serif;
     line-height: 1.2;
@@ -101,22 +90,10 @@ h3 {
     color: var(--primary);
 }
 
-/* ============================================
-   MAIN CONTENT WRAPPER
-   ============================================ */
-
 main {
     width: min(1120px, 92%);
     margin: 0 auto;
 }
-
-/* ============================================
-   HERO SECTION
-   No image provided by client — using a 
-   styled placeholder that communicates the 
-   brand feel. Swap background-image in when
-   client supplies the file.
-   ============================================ */
 
 .hero {
     background-color: var(--primary);
@@ -135,8 +112,6 @@ main {
     overflow: hidden;
 }
 
-/* decorative grid lines — gives a 3D blueprint feel 
-   without needing an image */
 .hero::before {
     content: "";
     position: absolute;
@@ -170,10 +145,6 @@ main {
     text-transform: uppercase;
 }
 
-/* ============================================
-   CONTENT SPLIT SECTION
-   ============================================ */
-
 .content-split {
     display: grid;
     grid-template-columns: 1fr;
@@ -198,10 +169,6 @@ main {
     line-height: 1.8;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
-
 footer {
     margin-top: 56px;
     padding: 24px 8%;
@@ -211,10 +178,6 @@ footer {
     font-size: 0.9rem;
     border-top: 3px solid var(--accent);
 }
-
-/* ============================================
-   RESPONSIVE — MOBILE
-   ============================================ */
 
 @media screen and (max-width: 760px) {
     header {
@@ -254,19 +217,3 @@ footer {
         font-size: 1.5rem;
     }
 }
-
-/* ============================================
-   WHEN IMAGE FILES ARRIVE FROM CLIENT:
-   
-   Replace the .hero gradient background with:
-   
-   .hero {
-       background-image: url('images/hero-image.png');
-       background-size: cover;
-       background-position: center;
-   }
-   
-   And remove the .hero::before grid overlay
-   if the image itself provides enough visual
-   interest.
-   ============================================ */
