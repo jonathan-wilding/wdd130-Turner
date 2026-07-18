@@ -1,105 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Troubleshooting & Resources | Dimensional Flow</title>
-  <meta name="description" content="Quick fixes for common 3D printing problems and free starter file resources.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensional Flow - From Screen to Reality</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <h1>Dimensional Flow</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tutorials.html">Project Tutorials</a>
+            <a href="troubleshooting.html">Troubleshooting & Resources</a>
+        </nav>
+    </header>
 
-<div class="topbar">
-  <div class="container">
-    <span>Project-first 3D modeling for beginners</span>
-    <span>Model • Print • Improve</span>
-  </div>
-</div>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="index.html"><img class="logo" src="images/image1.png" alt="Dimensional Flow logo"></a>
-    <button class="menu-button" aria-expanded="false" aria-label="Open navigation">Menu</button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="tutorials.html">Project Tutorials</a>
-      <a href="resources.html">Troubleshooting &amp; Resources</a>
-    </nav>
-  </div>
-</header>
+    <main>
+        <section class="hero">
+            <div class="building-image">
+                <img src="images/building.png" alt="3D Printed Building">
+                <div class="hero-text-box">
+                    <h2>From Screen to Reality: 3D Modeling Made Simple</h2>
+                    <p>Welcome to Dimension3</p>
+                </div>
+            </div>
+        </section>
+        <section class="content-split">
+            <div class="printer-section">
+                <img src="images/3d_printer.png" alt="3D Printer">
+                <div class="content-text">
+                    <h3>Our Project-First Approach</h3>
+                    <p>Getting into 3D modeling and printing shouldn't require an advanced engineering degree. If you've been staring at complex software interfaces feeling completely overwhelmed, you are in the right place. We break down the absolute essentials using a project-first approach. No dry theory, no endless jargon-just simple blueprints that lead straight to your first successful print. Explore our beginner-friendly projects or dive into our quick-fix printer troubleshooting guides to get your machine running flawlessly today.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <p class="eyebrow">Troubleshooting &amp; Resources</p>
-      <h1>Fix Your Prints &amp; Find Free Files.</h1>
-      <p class="lead">Do not let a bad print stop your momentum. When your printer acts up, use these quick-reference fixes to get back on track.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="tip-grid">
-        <article class="tip-card">
-          <div class="number">01</div>
-          <h3>The First Layer Failure</h3>
-          <p>If filament is not sticking to the bed, the nozzle is likely too high. Level the bed, clean the build surface, and run a one-layer leveling test.</p>
-        </article>
-        <article class="tip-card">
-          <div class="number">02</div>
-          <h3>Stringing and Cobwebs</h3>
-          <p>If prints look hairy, retraction settings or temperature may be too high. Lower the nozzle temperature by 5°C, test again, and adjust retraction gradually.</p>
-        </article>
-        <article class="tip-card">
-          <div class="number">03</div>
-          <h3>Open-Source File Library</h3>
-          <p>Use vetted STL files for calibration cubes, stress tests, bed-level checks, and useful starter prints without modeling from scratch.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section white">
-    <div class="container split">
-      <div class="project-image"><img src="images/image7.png" alt="Side-by-side example of a failed stringy print and a clean print"></div>
-      <div>
-        <p class="eyebrow">Read the result</p>
-        <h2>Change one setting at a time.</h2>
-        <p>A clean troubleshooting process is faster than changing several settings at once. Save a known-good profile, make one adjustment, and print a small test object before starting a long project.</p>
-        <ul class="checklist">
-          <li>Confirm bed level and first-layer height</li>
-          <li>Check material temperature range</li>
-          <li>Inspect retraction and travel settings</li>
-          <li>Keep notes on successful profiles</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container resource-banner">
-      <img src="images/image2.png" alt="Laptop displaying a library of open-source 3D models">
-      <div class="resource-copy">
-        <p class="eyebrow">Free file library</p>
-        <h2>Ready to print right now?</h2>
-        <p>Browse calibration objects, stress tests, organizers, stands, and other beginner-friendly models. Review the listed dimensions and recommended settings before sending a file to your printer.</p>
-        <div class="actions"><a class="button" href="#">Browse Starter Files</a></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-grid">
-    <img src="images/image1.png" alt="Dimensional Flow logo">
-    <div>
-      <a href="index.html">Home</a>
-      <a href="tutorials.html">Tutorials</a>
-      <a href="resources.html">Resources</a>
-      <p>© 2026 Dimensional Flow · Alex Turner · WDD 130</p>
-    </div>
-  </div>
-</footer>
-<script src="script.js"></script>
-
+    <footer>
+        <p>&copy; 2026 Dimensional Flow | Alex Turner | WDD 130</p>
+    </footer>
 </body>
 </html>
